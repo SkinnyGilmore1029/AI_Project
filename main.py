@@ -26,6 +26,9 @@ token_count = response.usage_metadata.prompt_token_count
 cand_token_count = response.usage_metadata.candidates_token_count
 
 if len(sys.argv) > 2 and sys.argv[2] == "--verbose":
-    print(f"{response.text}\nPrompt tokens: {token_count}\nResponse tokens: {cand_token_count}")
+    print(f"User prompt: {user_input}\n")
+    print(f"Prompt tokens: {token_count}\n")
+    print(f"Response tokens: {cand_token_count}\n")
+    print(f"{response.text}")
 else:
     print(response.text)
